@@ -11,14 +11,21 @@
             height:500px;
         }
     </style>
+    
+
 </head>
 <body>
-    <form>
-        <textarea name="contents">
-            수정페이지요!
-        </textarea>
-        <input type="submit" value="올리기" />
-    </form>
-
+    <script type="text/javascript" src="../se2/js/HuskyEZCreator.js" charset="utf-8"></script>
+	<textarea name="ir1" id="ir1" rows="10" cols="100">에디터에 기본으로 삽입할 글(수정 모드)이 없다면 이 value 값을 지정하지 않으시면 됩니다.</textarea>
+	
+    <script type="text/javascript">
+var oEditors = [];
+nhn.husky.EZCreator.createInIFrame({
+    oAppRef: oEditors,
+    elPlaceHolder: "ir1",
+    sSkinURI: "../se2/SmartEditor2Skin.html",
+    fCreator: "createSEditor2"
+});
+</script>
 </body>
 </html>
