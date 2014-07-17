@@ -146,22 +146,22 @@
 		<%
 			if (IDX == null) {
 		%>
-		<input type="submit" value="WRITE" name="submitbtn">
+		<input type="submit" value="글쓰기" name="submitbtn">
 		<%
 			} else {
 		%>
-		<input type="button" value="LIST" name="list" onClick="goList()">
+		<input type="button" value="목록" name="list" onClick="goList()">
 		<%
 			if (WRITER.equalsIgnoreCase(UID)) {
 					if (MODE.equalsIgnoreCase("R")) {
 		%>
-		<input type="button" value="EDIT" name="edit" onClick="goEdit(<%=IDX%>)">
-		<input type="button" value="DELETE" name="delete" onClick="goDelete(<%=IDX%>)">
+		<input type="button" value="수정" name="edit" onClick="goEdit(<%=IDX%>)">
+		<input type="button" value="삭제" name="delete" onClick="goDelete(<%=IDX%>)">
 		<%
 			} else {
 		%>
 		<input type="hidden" name="idx" value=<%=IDX%>>
-		<input type="submit" value="WRITE" name="submitbtn" id="submitbtn">
+		<input type="submit" value="글쓰기" name="submitbtn" id="submitbtn">
 		<%
 			}
 		%>
