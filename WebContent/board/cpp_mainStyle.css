@@ -1,0 +1,28 @@
+/*초기화*/
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+        * { margin: 0; padding: 0;}
+        body { font-family: 'Nanum Gothic',sans-serif; }
+        li { list-style: none; }
+        a { text-decoration: none; }
+        img { border: 0; }
+/*LEFT 네비게이션*/
+        #left_nav {
+            float: left;
+            width: 200px;
+            border-right: 1px solid #5ed974;
+            border-bottom: 1px solid #5ed974;
+        }
+        #left_nav > ul > li {
+            padding: 20px;
+        }
+        #left_nav > ul > li > a {
+            color: black;
+        }
+
+/*iframe*/
+        iframe {
+            float:left;
+            width: 900px;
+            border: 0;
+            padding: 20px;
+        }

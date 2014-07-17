@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>웹스와 함께하는 언어공부</title>
+    
+    <!-- 초기화 -->
+    <style>
+        * { margin: 0; padding: 0;}
+        body { font-family: 'Times New Roman',serif; }
+        li { list-style: none; }
+        a { text-decoration: none; }
+        img { border: 0; }
+    </style>
+
+    <!--LEFT 네비게이션-->
+    <style>
+        #left_nav {
+            float: left;
+            width: 200px;
+            border-right: 1px solid #5ed974;
+            border-bottom: 1px solid #5ed974;
+        }
+        #left_nav > ul > li {
+            padding: 20px;
+        }
+        #left_nav > ul > li > a {
+            color: black;
+        }
+    </style>
+
+    <!--iframe-->
+    <style>
+        iframe {
+            float:left;
+            width: 900px;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <!--LEFT 네비게이션-->
+    <nav id="left_nav">
+        <ul>
+            <li><a href="cpp1.html" target="mainf">C++이란?</a></li>
+            <li><a href="cpp2.html" target="mainf">변수</a></li>
+            <li><a href="cpp3.html" target="mainf">입출력 함수</a></li>
+            <li><a href="cpp4.html" target="mainf">반복문</a></li>
+            <li><a href="cpp5.html" target="mainf">조건문</a></li>
+        </ul>
+    </nav>
+  
+    <iframe name="mainf" src="cpp1.html" scrolling="no" height="1000">
+    </iframe>
+
+</body>
+</html>

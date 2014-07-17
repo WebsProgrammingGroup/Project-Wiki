@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <!-- 초기화 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Times New Roman',serif;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        img {
+            border: 0;
+        }
+    </style>
+    <!-- 헤더 -->
+    <style>
+        #main_header {
+            width: 100%;
+            height: 150px;
+            background-color: #5ed974;
+        }
+        #right_nav {
+            position: absolute;
+            right: 0px;
+        }
+
+            #right_nav > ul > li {
+                float: left;
+                padding: 10px;
+            }
+
+                #right_nav > ul > li > a {
+                    color: white;
+                }
+
+        #main_header > h1.maintext {
+            text-align: center;
+            padding-top: 70px;
+        }
+
+            #main_header > h1.maintext > a {
+                color: white;
+                font-family: BatangChe;
+            }
+    </style>
+
+    <!-- 네비게이션 -->
+    <style>
+        #top_nav {
+            width: 100%;
+            height: 50px;
+            background-color: #5ed974;
+        }
+      
+            #top_nav > ul > li {
+                float: left;
+                padding-left: 0px;
+                padding-right: 0px;
+                text-align: center;
+                position: relative;
+            }
+
+                #top_nav > ul > li > a {
+                    color: white;
+                }
+
+                #top_nav > ul > li.leftborder {
+                    border-left: 1px solid gray;
+                }
+
+        .menuLink, .submenuLink {
+            display: block;
+            width: 100px;
+        }
+
+        .submenuLink {
+            color: white;
+            background-color: #5ed974;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .submenu {
+            position: absolute;
+            height: 0px;
+            overflow: hidden;
+            transition: height .2s;
+            -webkit-transition: height .2s;
+            -moz-transition: height .2s;
+            -o-transition: height .2s;
+        }
+
+        .topmenuLi:hover .submenu {
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <!--헤더-->
+    <header id="main_header">
+        <nav id="right_nav">
+            <ul>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+        </nav>
+        <h1 class="maintext">
+            <a href="body.html" target="bodyFrame">웹스와 함께하는 언어공부</a>
+        </h1>
+    </header>
+
+    <!--네비게이션-->
+    <nav id="top_nav">
+        
+        <ul>
+            <li class="topmenuLi">
+                <a class="menuLink" href="cpp_main.html" target="bodyFrame">C++</a>
+                <ul class="submenu">
+                    <li><a class="submenuLink" href="cpp1.html" target="mainf">C++이란?</a></li>
+                    <li><a class="submenuLink" href="cpp2.html" target="mainf">변수</a></li>
+                    <li><a class="submenuLink" href="cpp3.html" target="mainf">입출력함수</a></li>
+                    <li><a class="submenuLink" href="cpp4.html" target="mainf">반복문</a></li>
+                    <li><a class="submenuLink" href="cpp5.html" target="mainf">조건문</a></li>
+                </ul>
+            </li>
+            <li class="leftborder topmenuLi">
+                <a class="menuLink" href="html_main.html" target="bodyFrame">HTML</a>
+                <ul class="submenu">
+                    <li><a class="submenuLink" href="html1.html" target="mainf">HTML1</a></li>
+                    <li><a class="submenuLink" href="html2.html" target="mainf">HTML2</a></li>
+                    <li><a class="submenuLink" href="html3.html" target="mainf">HTML3</a></li>
+                    <li><a class="submenuLink" href="html4.html" target="mainf">HTML4</a></li>
+                </ul>
+            </li>
+            <li class="leftborder">
+                <a class="menuLink" href="java_main.html" target="bodyFrame">JAVA</a>
+            </li>
+            <li class="leftborder">
+                <a class="menuLink" href="jsp_main.html" target="bodyFrame">JSP</a>
+            </li>
+            <li class="leftborder">
+                <a class="menuLink" href="mysql_main.html" target="bodyFrame">MySQL</a>
+            </li>
+            <li class="leftborder">
+                <a class="menuLink" href="list.jsp" target="bodyFrame">Q&A</a>
+            </li>
+        </ul>
+        
+    </nav>
+</body>
+</html>
