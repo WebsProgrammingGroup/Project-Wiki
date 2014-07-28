@@ -1,4 +1,4 @@
-<%@ include file = "../config/dbconn.jsp" %>
+<%@ include file = "./config/dbconn.jsp" %>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
