@@ -26,7 +26,7 @@
             </ul>
         </nav>
         <h1 class="maintext">
-            <a href="newindex.html">ì¹ì¤ì í¨ê»íë ì¸ì´ê³µë¶</a>
+            <a href="newindex.jsp">ì¹ì¤ì í¨ê»íë ì¸ì´ê³µë¶</a>
         </h1>
     </header>
 
@@ -36,7 +36,7 @@
 	        <div class="divclass">
 	    	    <ul>
 		            <li class="topmenu">
-		                <a class="menuLink" href="newbody.html">C++</a>
+		                <a class="menuLink" href="newbody.jsp">C++</a>
 		                <ul class="submenu">
 		                    <li><a class="submenuLink" href="#">C++ì´ë?</a></li>
 		                    <li><a class="submenuLink" href="#">ë³ì</a></li>

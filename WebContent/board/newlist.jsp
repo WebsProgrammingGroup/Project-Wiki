@@ -15,7 +15,7 @@
             </ul>
         </nav>
         <h1 class="maintext">
-            <a href="newindex.html">웹스와 함께하는 언어공부</a>
+            <a href="newindex.jsp">웹스와 함께하는 언어공부</a>
         </h1>
     </header>
 
@@ -25,7 +25,7 @@
 	        <div class="divclass">
 	    	    <ul>
 		            <li class="topmenu">
-		                <a class="menuLink" href="newbody.html">C++</a>
+		                <a class="menuLink" href="newbody.jsp">C++</a>
 		                <ul class="submenu">
 		                    <li><a class="submenuLink" href="cpp1.html">C++이란?</a></li>
 		                    <li><a class="submenuLink" href="cpp2.html">변수</a></li>

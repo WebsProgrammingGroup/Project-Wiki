@@ -16,7 +16,7 @@ while(rs.next()) // ResultSet 가져와서 처리
 String count = rs.getString(1);
 if(count.equals("1")){
 session.setAttribute("userid",UID);
-response.sendRedirect("list.jsp");
+response.sendRedirect("newindex.jsp");
 			}
 		}
 		response.sendRedirect("login.jsp");
