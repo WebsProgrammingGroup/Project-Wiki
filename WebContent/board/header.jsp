@@ -1,22 +1,38 @@
-﻿<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page session = "true" %>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<%@ include file = "../config/dbconn.jsp" %>
+
+<html>
 <head>
-    <meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>웹스와 함께하는 언어공부</title>
     <link href="headerStyle.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-    <!--헤더-->
     <header id="main_header">
+        <%
+			if(session.getAttribute("uidx") == null){	// 로그인 안 된 상태
+		%>
         <nav id="right_nav">
             <ul>
-                <li><a href="login.jsp" target="bodyFrame">로그인</a></li>
-                <li><a href="member.jsp" target="bodyFrame">회원가입</a></li>
+                <li><a href="login.jsp" >로그인</a></li>
+                <li><a href="member.jsp">회원가입</a></li>
             </ul>
         </nav>
+		<%
+			}else{
+		%>
+           <nav id="right_nav">
+            <ul>
+                <li><a href="logout.jsp">로그아웃</a></li>
+            </ul>
+             </nav>
+        <%} %>
+        
+        
         <h1 class="maintext">
-            <a href="body.html" target="bodyFrame">웹스와 함께하는 언어공부</a>
+            <a href="index.jsp">웹스와 함께하는 언어공부</a>
         </h1>
     </header>
 
