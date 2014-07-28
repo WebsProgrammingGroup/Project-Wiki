@@ -15,7 +15,7 @@
             </ul>
         </nav>
         <h1 class="maintext">
-            <a href="body.html">웹스와 함께하는 언어공부</a>
+            <a href="newindex.html">웹스와 함께하는 언어공부</a>
         </h1>
     </header>
 
@@ -25,7 +25,7 @@
 	        <div class="divclass">
 	    	    <ul>
 		            <li class="topmenu">
-		                <a class="menuLink" href="cpp_main.html">C++</a>
+		                <a class="menuLink" href="newbody.html">C++</a>
 		                <ul class="submenu">
 		                    <li><a class="submenuLink" href="cpp1.html">C++이란?</a></li>
 		                    <li><a class="submenuLink" href="cpp2.html">변수</a></li>
@@ -53,7 +53,7 @@
 		                <a class="menuLink" href="mysql_main.html">MySQL</a>
 		            </li>
 		            <li class="leftborder">
-		                <a class="menuLink" href="list.jsp">Q&A</a>
+		                <a class="menuLink" href="newlist.jsp">Q&A</a>
 		            </li>
 		        </ul>     
 	        </div>
