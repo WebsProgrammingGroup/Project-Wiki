@@ -1,4 +1,4 @@
-<%@ include file="../config/dbconn.jsp"%>
+<%@ include file="./config/dbconn.jsp"%>
 <%@ page language="java" import="java.util.*, java.text.*"%>
 <%
 request.setCharacterEncoding("utf-8");

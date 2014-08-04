@@ -1,5 +1,5 @@
 <%@page import="com.sun.xml.internal.ws.wsdl.writer.document.OpenAtts"%>
-<%@ include file="dbConnect.jsp"%>
+<%@ include file="./config/dbconn.jsp"%>
 <%@ page  contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <html>
 <head>

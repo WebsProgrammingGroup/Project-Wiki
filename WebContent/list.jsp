@@ -1,13 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-
-<%@ include file = "../config/dbconn.jsp" %>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<%@ include file="./config/dbconn.jsp" %>
+<%@ page  contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<html>
 <head>
-    <meta charset="utf-8" />
-    <title>웹스와 함께하는 언어공부</title>
-    <link href="indexStyle.css" type="text/css" rel="stylesheet">
+<title>게시판 목록</title>
+    <link href="listStyle.css" type="text/css" rel="stylesheet">
 </head>
 <body>
     <!--헤더-->
@@ -75,36 +71,49 @@
 	        </div>
 	    </nav>
 	</div>
-	<!--콘텐츠-->
-    <div id="content">
-        <section id="QNA">
-        <h1>Q&A</h1>
-       	<table>
-       	<tr>
-			<th id="title"><p>제목</p></th>
+
+	<h1>Q&A</h1>
+	<div id="wrapper">
+	<table>
+		<tr>
+			<th id="no"><p>No</p></th>
+			<th id="writer"><p>Writer</p></th>
+			<th id="title"><p>Title</p></th>
+			<th id="date"><p>Date</p></th>
+			<th id="hits"><p>Hits</p></th>
 		</tr>
-		</table>
-        </section>
-
-        <section id="gongmo">
-            <h1>공모전정보</h1>
-            <input id="first" type="radio" name="tab" checked="checked" />
-            <input id="second" type="radio" name="tab" />
-            <section class="buttons">
-                <label for="first">1</label>
-                <label for="second">2</label>
-            </section>
-            <div class="tab_item">
-                <img src="http://image.ajunews.com/content/image/2014/06/16/20140616101000996474.jpg" width="250" />
-            </div>
-            <div class="tab_item">
-                <img src="http://imgnews.naver.net/image/215/2014/01/06/A201401060143_1_59_20140106100913.jpg" width="250" />
-            </div>
-        </section>
-
-        <aside id="chatting">
-            <h1>채팅방</h1>
-        </aside>
-    </div>
+		<%
+			try {
+				conn = DriverManager
+						.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+				stmt = conn.createStatement();
+				String query = "SELECT * FROM board";
+				rs = stmt.executeQuery(query);
+		%>
+		<%
+			while (rs.next()) {
+		%>
+		<tr>
+			<td><%=rs.getInt(1)%></td>
+			<td><%=rs.getString(2)%></td>
+			<td><a href="write.jsp?idx=<%=rs.getInt(1)%>&mode=R"> <%=rs.getString(3)%></a></td>
+			<td><%=rs.getString("wdate")%></td>
+			<td><%=rs.getString("hits")%></td>
+		</tr>
+		<%
+			} // end while
+		%>
+		<%
+			rs.close();
+				stmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				out.println("err:" + e.toString());
+				return;
+			}
+		%>
+	</table>
+	</div>
+	<a id="writelink" href="write.jsp?mode=W"> 글쓰기 </a>
 </body>
 </html>

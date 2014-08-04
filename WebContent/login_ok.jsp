@@ -3,7 +3,7 @@
 org.jsoup.nodes.Element, org.jsoup.select.Elements, java.net.*, java.util.*, java.text.*,
 com.oreilly.servlet.*, com.oreilly.servlet.multipart.*" %>
 
-<%@ include file="../config/dbconn.jsp" %>
+<%@ include file="./config/dbconn.jsp" %>
 
 <%
 request.setCharacterEncoding("UTF-8");
@@ -19,12 +19,12 @@ stmt = conn.createStatement();
 rs = stmt.executeQuery(query);
 
 if(rs.next()){
-   session.setAttribute("uidx", rs.getString("idx"));
-   response.sendRedirect("index.jsp");
+	session.setAttribute("uidx", rs.getString("idx"));
+	response.sendRedirect("index.jsp");
 }
 else{
-   out.println("<script>alert('로그인에 실패하였습니다.');");
-   out.println("history.go(-1);</script>");
+	out.println("<script>alert('로그인에 실패하였습니다.');");
+	out.println("history.go(-1);</script>");
 }
 
 
