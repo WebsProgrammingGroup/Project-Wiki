@@ -68,25 +68,25 @@
 					%>
             </li>
             <li class="leftborder topmenu">
-                <a class="menuLink" href="html_main.html" target="bodyFrame">HTML</a>
+                <a class="menuLink" href="html_main.html">HTML</a>
                 <ul class="submenu">
-                    <li><a class="submenuLink" href="html1.html" target="mainf">HTML1</a></li>
-                    <li><a class="submenuLink" href="html2.html" target="mainf">HTML2</a></li>
-                    <li><a class="submenuLink" href="html3.html" target="mainf">HTML3</a></li>
-                    <li><a class="submenuLink" href="html4.html" target="mainf">HTML4</a></li>
+                    <li><a class="submenuLink" href="html1.html">HTML1</a></li>
+                    <li><a class="submenuLink" href="html2.html">HTML2</a></li>
+                    <li><a class="submenuLink" href="html3.html">HTML3</a></li>
+                    <li><a class="submenuLink" href="html4.html">HTML4</a></li>
                 </ul>
             </li>
             <li class="leftborder">
-                <a class="menuLink" href="java_main.html" target="bodyFrame">JAVA</a>
+                <a class="menuLink" href="java_main.html">JAVA</a>
             </li>
             <li class="leftborder">
-                <a class="menuLink" href="jsp_main.html" target="bodyFrame">JSP</a>
+                <a class="menuLink" href="jsp_main.html">JSP</a>
             </li>
             <li class="leftborder">
-                <a class="menuLink" href="mysql_main.html" target="bodyFrame">MySQL</a>
+                <a class="menuLink" href="mysql_main.html">MySQL</a>
             </li>
             <li class="leftborder">
-                <a class="menuLink" href="list.jsp" target="bodyFrame">Q&A</a>
+                <a class="menuLink" href="list.jsp">Q&A</a>
             </li>
         </ul>     
             </div>

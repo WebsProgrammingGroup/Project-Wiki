@@ -21,7 +21,14 @@
 <link href="writeStyle.css" type="text/css" rel="stylesheet">
 </head>
 <%
-	String UID = (String) session.getAttribute("userid");
+	conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+	String UIDX = (String) session.getAttribute("uidx");
+	String newQuery = "select * from `member` where `idx` = " + UIDX;
+	stmt = conn.createStatement();
+	rs = stmt.executeQuery(newQuery);
+	rs.next();
+	String UID = rs.getString("id");
+	
 	if (UID == null)
 		response.sendRedirect("login.jsp");
 
@@ -31,6 +38,10 @@
 	String TITLE = null;
 	String CONTENTS = null;
 	String Query = null;
+	rs.close();
+	stmt.close();
+	conn.close();
+
 %>
 
 <%
