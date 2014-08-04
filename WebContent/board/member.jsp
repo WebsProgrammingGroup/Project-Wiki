@@ -8,7 +8,7 @@
 <body>
 	<h1>JOIN PAGE</h1>
 	<div class="wrapper">
-	<form action="member_ok.jsp" method="post" name="regitform" target="bodyFrame">
+	<form action="member_ok.jsp" method="post" name="regitform">
 		<a>아이디</a>
 		<input type="text" name="uid" class="input_box">
 		<a>이름</a>

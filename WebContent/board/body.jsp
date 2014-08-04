@@ -1,9 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
 <%@ include file="../config/dbconn.jsp" %>
-<%@ page  contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<html>
+
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>게시판 목록</title>
-    <link href="listStyle.css" type="text/css" rel="stylesheet">
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="bodyStyle.css" type="text/css" rel="stylesheet">
+        <SCRIPT>
+    function submitForm(){
+    	var f = document.addcomment;
+    		f.submit();
+    }
+    </SCRIPT>
 </head>
 <body>
     <!--헤더-->
@@ -71,34 +82,45 @@
 	        </div>
 	    </nav>
 	</div>
-
-	<h1>Q&A</h1>
-	<div id="wrapper">
-	<table>
-		<tr>
-			<th id="no"><p>No</p></th>
-			<th id="writer"><p>Writer</p></th>
-			<th id="title"><p>Title</p></th>
-			<th id="date"><p>Date</p></th>
-			<th id="hits"><p>Hits</p></th>
+	
+	<!--Left 네비게이션-->
+    <nav id="left_nav">
+        <ul>
+            <li><a href="cpp1.html" target="mainf">C++이란?</a></li>
+            <li><a href="cpp2.html" target="mainf">변수</a></li>
+            <li><a href="cpp3.html" target="mainf">입출력함수</a></li>
+            <li><a href="cpp4.html" target="mainf">반복문</a></li>
+            <li><a href="cpp5.html" target="mainf">조건문</a></li>
+        </ul>
+    </nav>
+	
+	<!--컨텐츠 -->
+    <div id="contents">
+		내용
+		<a href="modify.html"><input type="button" value="수정하기"/></a>
+    </div>
+    <div id="reply">
+    <table>
+    	<tr>
+			<td id="writer">작성자</td>
+			<td id="text">내용</td>
+			<td id="date">날짜</td>
 		</tr>
 		<%
 			try {
 				conn = DriverManager
 						.getConnection(DB_URL, DB_USER, DB_PASSWORD);
 				stmt = conn.createStatement();
-				String query = "SELECT * FROM board";
+				String query = "SELECT * FROM comment";
 				rs = stmt.executeQuery(query);
 		%>
 		<%
 			while (rs.next()) {
 		%>
 		<tr>
-			<td><%=rs.getInt(1)%></td>
 			<td><%=rs.getString(2)%></td>
-			<td><a href="write.jsp?idx=<%=rs.getInt(1)%>&mode=R"> <%=rs.getString(3)%></a></td>
+			<td><%=rs.getString(3)%>
 			<td><%=rs.getString("wdate")%></td>
-			<td><%=rs.getString("hits")%></td>
 		</tr>
 		<%
 			} // end while
@@ -112,8 +134,11 @@
 				return;
 			}
 		%>
-	</table>
-	</div>
-	<a id="writelink" href="write.jsp?mode=W"> 글쓰기 </a>
+    </table>
+    
+    <form action="cpp1_comment_prog.jsp" method="post" name="addcomment" onsubmit="return false">
+    <input type="text" name="comment" value="댓글 내용" id="textbox">
+    <input type="button" value="댓글 쓰기" onClick="submitForm()" id="writebutton">
+    </form>
+    </div>
 </body>
-</html>

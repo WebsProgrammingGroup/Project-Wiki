@@ -6,7 +6,7 @@
 <title>WRITE</title>
 <script language="javascript">
  function goList(){
- parent.location.replace("newlist.jsp");
+ parent.location.replace("list.jsp");
  }
  function goEdit(idx){
  parent.location.replace("write.jsp?idx="+idx +"&mode=E");

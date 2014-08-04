@@ -3,5 +3,5 @@
 <%@ include file="../config/dbconn.jsp" %>
 <%
 	session.removeAttribute("uidx");
-	response.sendRedirect("./newindex.jsp");
+	response.sendRedirect("./index.jsp");
 %>

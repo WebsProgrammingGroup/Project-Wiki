@@ -1,27 +1,32 @@
-<%@ include file="dbConnect.jsp"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" import="java.sql.*, java.io.IOException, org.jsoup.Jsoup, org.jsoup.nodes.Document,
+org.jsoup.nodes.Element, org.jsoup.select.Elements, java.net.*, java.util.*, java.text.*,
+com.oreilly.servlet.*, com.oreilly.servlet.multipart.*" %>
+
+<%@ include file="../config/dbconn.jsp" %>
+
 <%
-request.setCharacterEncoding("utf-8"); // 한글 처리를 위한 구문
-String UID = request.getParameter("uid");
-String UPW = request.getParameter("upw");
-%>
-<%
-	try {
-// Connection 을 가져온다.
-conn = DriverManager.getConnection(DB_URL,DB_USER,DB_PASSWORD);
-String query = "SELECT count(*) from member where uid='" + UID +"' and upw='" + UPW + "'";
+request.setCharacterEncoding("UTF-8");
+
+conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+
+String uid = request.getParameter("uid");
+String upw = request.getParameter("upw");
+
+String query = "select * from `member` where `id`='"+uid+"' and `pwd`=password('"+upw+"')";
+
 stmt = conn.createStatement();
 rs = stmt.executeQuery(query);
-while(rs.next()) // ResultSet 가져와서 처리
-{
-String count = rs.getString(1);
-if(count.equals("1")){
-session.setAttribute("userid",UID);
-response.sendRedirect("newindex.jsp");
-			}
-		}
-		response.sendRedirect("login.jsp");
-	} catch (Exception e) {
-		out.println(e);
-		return;
-	}
+
+if(rs.next()){
+   session.setAttribute("uidx", rs.getString("idx"));
+   response.sendRedirect("index.jsp");
+}
+else{
+   out.println("<script>alert('로그인에 실패하였습니다.');");
+   out.println("history.go(-1);</script>");
+}
+
+
+
 %>

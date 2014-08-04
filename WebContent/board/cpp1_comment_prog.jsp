@@ -22,9 +22,9 @@
 		pstmt.setString(1, UID);
 		pstmt.setString(2, CONTENTS);
 		pstmt.executeUpdate();
-		out.println("<script>alert('댓글이 등록되었습니다.'); document.location.href='./cpp1.jsp';</script>");
+		out.println("<script>alert('댓글이 등록되었습니다.'); document.location.href='./body.jsp';</script>");
 	}
 	else{
-		out.println("<script>alert('로그인 해주세요.'); document.location.href='./cpp1.jsp';</script>");
+		out.println("<script>alert('로그인 해주세요.'); document.location.href='./body.jsp';</script>");
 		}
 %>

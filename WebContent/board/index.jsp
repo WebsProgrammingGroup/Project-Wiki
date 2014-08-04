@@ -1,22 +1,37 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<%@ include file = "../config/dbconn.jsp" %>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <title>웹스와 함께하는 언어공부</title>
-    <link href="newbodyStyle.css" type="text/css" rel="stylesheet">
+    <link href="indexStyle.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-	<!--헤더-->
+    <!--헤더-->
     <header id="main_header">
+        <%
+			if(session.getAttribute("uidx") == null){	// 로그인 안 된 상태
+		%>
         <nav id="right_nav">
             <ul>
                 <li><a href="login.jsp">로그인</a></li>
                 <li><a href="member.jsp">회원가입</a></li>
             </ul>
         </nav>
+        <%
+			}else{
+		%>
+           <nav id="right_nav">
+            <ul>
+                <li><a href="logout.jsp">로그아웃</a></li>
+            </ul>
+             </nav>
+        <%} %>
         <h1 class="maintext">
-            <a href="newindex.html">웹스와 함께하는 언어공부</a>
+            <a href="index.jsp">웹스와 함께하는 언어공부</a>
         </h1>
     </header>
 
@@ -26,7 +41,7 @@
 	        <div class="divclass">
 	    	    <ul>
 		            <li class="topmenu">
-		                <a class="menuLink" href="newbody.html">C++</a>
+		                <a class="menuLink" href="body.jsp">C++</a>
 		                <ul class="submenu">
 		                    <li><a class="submenuLink" href="#">C++이란?</a></li>
 		                    <li><a class="submenuLink" href="#">변수</a></li>
@@ -54,40 +69,42 @@
 		                <a class="menuLink" href="#">MySQL</a>
 		            </li>
 		            <li class="leftborder">
-		                <a class="menuLink" href="newlist.jsp">Q&A</a>
+		                <a class="menuLink" href="list.jsp">Q&A</a>
 		            </li>
 		        </ul>     
 	        </div>
 	    </nav>
 	</div>
-	
-	<!--Left 네비게이션-->
-    <nav id="left_nav">
-        <ul>
-            <li><a href="cpp1.html" target="mainf">C++이란?</a></li>
-            <li><a href="cpp2.html" target="mainf">변수</a></li>
-            <li><a href="cpp3.html" target="mainf">입출력 함수</a></li>
-            <li><a href="cpp4.html" target="mainf">반복문</a></li>
-            <li><a href="cpp5.html" target="mainf">조건문</a></li>
-        </ul>
-    </nav>
-	
-	<!--글내용 -->
-    <div id="contents">
-		글내용
-		<a href="modify.html"><input type="button" value="수정"/></a>
-    </div>
-    <div id="reply">
-	<table>
-		<tr>
-			<td id="writer">작성자</td>
-			<td id="text">내용</td>
-			<td id="date">작성일자</td>
+	<!--콘텐츠-->
+    <div id="content">
+        <section id="QNA">
+        <h1>Q&A</h1>
+       	<table>
+       	<tr>
+			<th id="title"><p>제목</p></th>
 		</tr>
-	</table>
-	<form>
-	<input type="text" value="댓글내용" id="textbox">
-	<input type="button" value="댓글쓰기" id="writebutton">
-	</form>
+		</table>
+        </section>
+
+        <section id="gongmo">
+            <h1>공모전정보</h1>
+            <input id="first" type="radio" name="tab" checked="checked" />
+            <input id="second" type="radio" name="tab" />
+            <section class="buttons">
+                <label for="first">1</label>
+                <label for="second">2</label>
+            </section>
+            <div class="tab_item">
+                <img src="http://image.ajunews.com/content/image/2014/06/16/20140616101000996474.jpg" width="250" />
+            </div>
+            <div class="tab_item">
+                <img src="http://imgnews.naver.net/image/215/2014/01/06/A201401060143_1_59_20140106100913.jpg" width="250" />
+            </div>
+        </section>
+
+        <aside id="chatting">
+            <h1>채팅방</h1>
+        </aside>
     </div>
 </body>
+</html>
