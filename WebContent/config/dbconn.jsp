@@ -11,7 +11,7 @@ response.setContentType("text/html; charset=UTF-8");
 Class.forName("com.mysql.jdbc.Driver");
 String DB_URL = "jdbc:mysql://localhost:3306/wiki?useUnicode=true&characterEncoding=utf8";
 String DB_USER = "root";
-String DB_PASSWORD = "0424";
+String DB_PASSWORD = "1234";
 
 Connection conn = null;
 Statement stmt = null;

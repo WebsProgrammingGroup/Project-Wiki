@@ -4,7 +4,7 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <title>웹스와 함께하는 언어공부</title>
     <link href="indexStyle.css" type="text/css" rel="stylesheet">
 </head>
