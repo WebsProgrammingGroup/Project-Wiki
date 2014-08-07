@@ -13,6 +13,9 @@ String MENU= request.getParameter("menu");
     	var f = document.addcomment;
     		f.submit();
     }
+    function cpp_main(){
+    	location.replace("cpp_main.jsp?menu=1");
+    }
     </SCRIPT>
 </head>
 <body>
@@ -46,12 +49,14 @@ String MENU= request.getParameter("menu");
 		if(rs.next()){
 	 %>	
 		<%=rs.getString("explain")%>
-		<%}else{
-			response.sendRedirect("cpp_main.jsp?menu=1");
+		<%}else{%>
+			<body onload="cpp_main()"><body>
+		<%
 		}
 		
 		%>
-		<a href="modify.jsp"><input type="button" value="수정하기"/></a>
+		
+		<a href="modify.jsp?menu=<%=MENU%>"><input type="button" value="수정하기"/></a>
     </div>
     
     <!-- 댓글 -->

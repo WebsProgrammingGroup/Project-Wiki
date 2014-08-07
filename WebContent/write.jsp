@@ -104,8 +104,10 @@
 				<%
 					} else {
 				%>
-				<td class="td2"><input <%if (MODE.equalsIgnoreCase("R")) {%>) readonly
-					<%}%> type="text" name="uid" value=<%=WRITER%>></td>
+				<td class="td2"><input <%if (MODE.equalsIgnoreCase("R")) {
+				%>) readonly
+					<%}
+					%> type="text" name="uid" value=<%=WRITER%>></td>
 				<%
 					}
 				%>
