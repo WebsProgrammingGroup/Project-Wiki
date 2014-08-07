@@ -67,14 +67,8 @@
 						// end while
 					%>
             </li>
-            <li class="leftborder topmenu">
+            <li class="leftborder">
                 <a class="menuLink" href="html_main.html">HTML</a>
-                <ul class="submenu">
-                    <li><a class="submenuLink" href="html1.html" target="mainf">HTML1</a></li>
-                    <li><a class="submenuLink" href="html2.html" target="mainf">HTML2</a></li>
-                    <li><a class="submenuLink" href="html3.html" target="mainf">HTML3</a></li>
-                    <li><a class="submenuLink" href="html4.html" target="mainf">HTML4</a></li>
-                </ul>
             </li>
             <li class="leftborder">
                 <a class="menuLink" href="java_main.html">JAVA</a>
