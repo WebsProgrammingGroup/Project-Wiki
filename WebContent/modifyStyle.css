@@ -41,40 +41,8 @@ img {
 	color: black;
 }
 
-/*댓글 쓰기*/
-form {
-	padding: 10px;
-}
-
-input#textbox {
-	width: 655px;
-	height: 42px;
-}
-
-input#writebutton {
-	width: 70px;
-	height: 46px;
-}
-
-/*댓글 목록*/
-table {
-	border-collapse: collapse;
-	margin: 10px;
-}
-
-td {
-	border: 1px solid black;
-	padding: 5px;
-}
-
-#writer {
-	width: 100px;
-}
-
-#text {
-	width: 500px;
-}
-
-#date {
-	width: 100px;
+/*에디터*/
+#editorwrapper {
+	width: 1000px;
+	float: left;
 }

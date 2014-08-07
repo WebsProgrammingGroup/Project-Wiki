@@ -6,7 +6,7 @@
 <%
 String MENU= request.getParameter("menu");
 %>
-
+<head>
     <link href="cpp_mainStyle.css" type="text/css" rel="stylesheet">
     <SCRIPT>
     function submitForm(){
@@ -14,7 +14,6 @@ String MENU= request.getParameter("menu");
     		f.submit();
     }
     </SCRIPT>
-
 </head>
 <body>
    <!--LEFT 네비게이션-->
@@ -52,7 +51,7 @@ String MENU= request.getParameter("menu");
 		}
 		
 		%>
-		<a href="modify.html"><input type="button" value="수정하기"/></a>
+		<a href="modify.jsp"><input type="button" value="수정하기"/></a>
     </div>
     
     <!-- 댓글 -->

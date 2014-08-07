@@ -47,7 +47,8 @@
 			}
 		%>
 	</table>
-	</div>
 	<a id="writelink" href="write.jsp?mode=W"> 글쓰기 </a>
+	</div>
+
 </body>
 </html>

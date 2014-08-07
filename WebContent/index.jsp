@@ -4,7 +4,7 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <title>웹스와 함께하는 언어공부</title>
     <link href="indexStyle.css" type="text/css" rel="stylesheet">
 </head>
@@ -15,7 +15,7 @@
         <h1>Q&A</h1>
        	<table>
        	<tr>
-			<th id="title"><p>제목</p></th>
+			<th id="title"><h1>제목</h1></th>
 		</tr>
 		<%
 			try {
@@ -63,7 +63,7 @@
         </section>
 
         <aside id="chatting">
-            <h1>채팅방</h1>
+            <embed src="http://www.gagalive.kr/gagalive.swf?chatroom=%7E%7E%7Ewebs%21"></embed> 
         </aside>
     </div>
 </body>
