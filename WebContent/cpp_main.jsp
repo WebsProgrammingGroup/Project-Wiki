@@ -42,6 +42,7 @@ String MENU= request.getParameter("menu");
 	</div>
 	
 	<!--컨텐츠 -->
+	<div id=conwrapper>
     <div id="contents">
 		<%
 		String mquery = "SELECT * FROM cplus WHERE idCplus='"+MENU+"'";
@@ -56,7 +57,7 @@ String MENU= request.getParameter("menu");
 		
 		%>
 		
-		<a href="modify.jsp?menu=<%=MENU%>"><input type="button" value="수정하기"/></a>
+		<a href="modify.jsp?menu=<%=MENU%>"><input type="button" class="btn" value="수정하기"/></a>
     </div>
     
     <!-- 댓글 -->
@@ -95,5 +96,6 @@ String MENU= request.getParameter("menu");
     <input type="text" name="comment" value="댓글내용" id="textbox">
     <input type="button" value="댓글쓰기" onClick="submitForm()" id="writebutton">
     </form>
+    </div>
     </div>
 </body>

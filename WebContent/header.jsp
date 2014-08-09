@@ -67,7 +67,7 @@
 						// end while
 					%>
             </li>
-            <li class="leftborder topmenu">
+            <li class="leftborder">
                 <a class="menuLink" href="html_main.html">HTML</a>
             </li>
             <li class="leftborder">
