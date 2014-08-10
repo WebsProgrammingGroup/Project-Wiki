@@ -46,6 +46,7 @@
 				}
 				// end while
 			%>
+			<img src="btn_1.png">
 		</nav>
 	</div>
 

@@ -46,7 +46,6 @@
         </section>
 
         <section id="gongmo">
-            <h1>공모전정보</h1>
             <input id="first" type="radio" name="tab" checked="checked" />
             <input id="second" type="radio" name="tab" />
             <section class="buttons">
