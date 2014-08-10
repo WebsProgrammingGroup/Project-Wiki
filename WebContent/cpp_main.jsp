@@ -5,6 +5,7 @@
 
 <%
 String MENU= request.getParameter("menu");
+String UIDX=(String)session.getAttribute("uidx");
 %>
 <head>
     <link href="cpp_mainStyle.css" type="text/css" rel="stylesheet">
@@ -70,13 +71,28 @@ String MENU= request.getParameter("menu");
 		</tr>
 		<%
 		try {
+			String Query = "SELECT * FROM member where idx ="+UIDX;
+			rs = stmt.executeQuery(Query);
+			rs.next();
+			String UID = rs.getString("id");
+			
+			
 			String cquery = "SELECT * FROM comment where category='"+MENU+"'";
 			rs = stmt.executeQuery(cquery);
 			while (rs.next()) {
 		%>
+		<input type="hidden" name="category" value="<%=rs.getString("idx")%>">
 		<tr>
 			<td><%=rs.getString("writer")%></td>
-			<td><%=rs.getString("contents")%>
+			<td>
+			<%=rs.getString("contents")%>
+			<%if(UID.equalsIgnoreCase(rs.getString("writer"))){%>
+				<input type="button" value="수정">
+				<input type="button" value="삭제">
+			<%
+			}
+			%>
+			</td>
 			<td><%=rs.getString("wdate")%></td>
 		</tr>
 		<%
@@ -91,7 +107,7 @@ String MENU= request.getParameter("menu");
 		%>
 	</table>
 
-    <form action="cpp1_comment_prog.jsp?" method="post" name="addcomment" onsubmit="return false">
+    <form action="cpp1_comment_prog.jsp" method="post" name="addcomment" onsubmit="return false">
     <input type="hidden" name="category" value="<%=MENU%>">
     <input type="text" name="comment" value="댓글내용" id="textbox">
     <input type="button" value="댓글쓰기" onClick="submitForm()" id="writebutton">
