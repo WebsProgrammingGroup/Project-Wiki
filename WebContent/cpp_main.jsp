@@ -13,6 +13,9 @@ String MENU= request.getParameter("menu");
     	var f = document.addcomment;
     		f.submit();
     }
+    function cpp_main(){
+    	location.replace("cpp_main.jsp?menu=1");
+    }
     </SCRIPT>
 </head>
 <body>
@@ -35,10 +38,12 @@ String MENU= request.getParameter("menu");
 		}
 		// end while
 	%>
+	<img src="btn_1.png">
 	</nav>
 	</div>
 	
 	<!--컨텐츠 -->
+	<div id=conwrapper>
     <div id="contents">
 		<%
 		String mquery = "SELECT * FROM cplus WHERE idCplus='"+MENU+"'";
@@ -46,12 +51,16 @@ String MENU= request.getParameter("menu");
 		if(rs.next()){
 	 %>	
 		<%=rs.getString("explain")%>
-		<%}else{
-			response.sendRedirect("cpp_main.jsp?menu=1");
+		<%}else{%>
+			<body onload="cpp_main()"><body>
+		<%
 		}
 		
 		%>
-		<a href="modify.jsp"><input type="button" value="수정하기"/></a>
+		
+		<div id="btnwrapper">
+		<a href="modify.jsp?menu=<%=MENU%>"><input type="button" class="btn" value="수정하기"/></a>
+		</div>
     </div>
     
     <!-- 댓글 -->
@@ -90,5 +99,6 @@ String MENU= request.getParameter("menu");
     <input type="text" name="comment" value="댓글내용" id="textbox">
     <input type="button" value="댓글쓰기" onClick="submitForm()" id="writebutton">
     </form>
+    </div>
     </div>
 </body>

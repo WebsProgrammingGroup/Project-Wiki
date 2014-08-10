@@ -43,6 +43,15 @@ img {
 
 /*¿¡µðÅÍ*/
 #editorwrapper {
-	width: 1000px;
-	float: left;
+	width: 800px;
+	margin: 0 auto;
+}
+
+.writebtn {
+	width: 300px;
+	height: 70px;
+	float: right;
+	margin-top: 30px;
+	background-color: white;
+	border: 1px solid #5ed574;
 }

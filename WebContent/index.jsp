@@ -12,10 +12,9 @@
 	<!--콘텐츠-->
     <div id="content">
         <section id="QNA">
-        <h1>Q&A</h1>
        	<table>
        	<tr>
-			<th id="title"><h1>제목</h1></th>
+			<th id="title"><h1>Q&A</h1></th>
 		</tr>
 		<%
 			try {
@@ -55,10 +54,10 @@
                 <label for="second">2</label>
             </section>
             <div class="tab_item">
-                <img src="http://image.ajunews.com/content/image/2014/06/16/20140616101000996474.jpg" width="250" />
+                <img src="http://image.ajunews.com/content/image/2014/06/16/20140616101000996474.jpg" width="300" />
             </div>
             <div class="tab_item">
-                <img src="http://imgnews.naver.net/image/215/2014/01/06/A201401060143_1_59_20140106100913.jpg" width="250" />
+                <img src="http://imgnews.naver.net/image/215/2014/01/06/A201401060143_1_59_20140106100913.jpg" width="300" />
             </div>
         </section>
 
