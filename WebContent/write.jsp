@@ -1,5 +1,6 @@
 <%@page import="com.sun.xml.internal.ws.wsdl.writer.document.OpenAtts"%>
-<%@ include file="./config/dbconn.jsp"%>
+<%@ include file="header.jsp" %>
+<%@ page session = "true" %>
 <%@ page  contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <html>
 <head>
@@ -21,10 +22,18 @@
 <link href="writeStyle.css" type="text/css" rel="stylesheet">
 </head>
 <%
-	String UID = (String) session.getAttribute("userid");
-	if (UID == null)
+	String UID=null;
+	conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+	String UIDX = (String)session.getAttribute("uidx");
+	if (UIDX == null)
 		response.sendRedirect("login.jsp");
-
+	else{
+		String newQuery = "select * from `member` where `idx` = " + UIDX;
+		stmt = conn.createStatement();
+		rs = stmt.executeQuery(newQuery);
+		rs.next();
+		UID = rs.getString("id");
+	}
 	String IDX = request.getParameter("idx");
 	String MODE = request.getParameter("mode");
 	String WRITER = null;
