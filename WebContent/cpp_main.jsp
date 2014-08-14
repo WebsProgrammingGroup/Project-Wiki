@@ -63,8 +63,8 @@ String CONTENTS = null;
     <%
 		conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
 		stmt = conn.createStatement();
-		String query = "SELECT * FROM cplus";
-		rs = stmt.executeQuery(query);
+		Query = "SELECT * FROM cplus";
+		rs = stmt.executeQuery(Query);
 		
 		while (rs.next()) {
 	%>
@@ -83,8 +83,8 @@ String CONTENTS = null;
 	<div id=conwrapper>
     <div id="contents">
 		<%
-		String mquery = "SELECT * FROM cplus WHERE idCplus='"+MENU+"'";
-		rs = stmt.executeQuery(mquery);
+		Query = "SELECT * FROM cplus WHERE idCplus='"+MENU+"'";
+		rs = stmt.executeQuery(Query);
 		if(rs.next()){
 	 %>	
 		<%=rs.getString("explain")%>
@@ -115,8 +115,8 @@ String CONTENTS = null;
 			UID = rs.getString("id");
 			}
 			
-			String cquery = "SELECT * FROM comment where category='"+MENU+"'";
-			rs = stmt.executeQuery(cquery);
+			Query = "SELECT * FROM comment where category='"+MENU+"'";
+			rs = stmt.executeQuery(Query);
 			while (rs.next()) {
 				%>
 				<tr>
