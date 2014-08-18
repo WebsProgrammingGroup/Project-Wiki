@@ -29,7 +29,6 @@ String CONTENTS = null;
     	parent.location.replace("cpp_main.jsp?idx="+idx +"&mode=D&menu="+<%=MENU%>);
     }
     </SCRIPT>
-</head>
 <%
 	if (IDX != null) {
 		try {
@@ -56,6 +55,7 @@ String CONTENTS = null;
 	}
 	else{}
 %>
+</head>
 <body>
    <!--LEFT 네비게이션-->
     <div id="left_wrapper">
